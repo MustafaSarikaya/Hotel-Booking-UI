@@ -1,0 +1,14 @@
+.search-section {
+    position: relative; /* Add this line */
+    z-index: 1; 
+    background-color: transparent;
+  }
+  
+  .search-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  
