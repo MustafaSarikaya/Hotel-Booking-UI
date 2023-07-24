@@ -8,9 +8,20 @@ import { AccountCircle } from "@mui/icons-material";
 import { Phone } from "@mui/icons-material";
 import LanguageSwitcher from "../language-switcher/LanguageSwitcher";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 function NavbarComponent() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleStaysClick = () => {
+    navigate("/bookings");
+  };
+
+  const handleContactUsClick = () => {
+    navigate("/contact-us");
+  };
+
   return (
     <>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary py-4">
@@ -23,14 +34,14 @@ function NavbarComponent() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="bookings">
+              <btn className="btn btn-light" onClick={handleStaysClick}>
                 <KingBed />
                 {t("navbar.stays")}
-              </Nav.Link>
-              <Nav.Link href="contact-us">
+              </btn>
+              <btn className="btn btn-light" onClick={handleContactUsClick}>
                 <Phone />
                 {t("navbar.contactUs")}
-              </Nav.Link>
+              </btn>
             </Nav>
             <Navbar.Brand className="text-center d-none d-lg-block">
               <Nav>
