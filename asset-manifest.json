@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fa8d9e76.css",
+    "main.js": "/static/js/main.b9e79eda.js",
+    "static/media/edvin-johansson-rlwE8f8anOc-unsplash.jpg": "/static/media/edvin-johansson-rlwE8f8anOc-unsplash.6688ec034ddcedc33782.jpg",
+    "index.html": "/index.html",
+    "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.fa8d9e76.css.map": "/static/css/main.fa8d9e76.css.map",
+    "main.b9e79eda.js.map": "/static/js/main.b9e79eda.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa8d9e76.css",
+    "static/js/main.b9e79eda.js"
+  ]
+}
