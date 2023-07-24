@@ -8,7 +8,7 @@ export const rooms = [
       amenities: 8,
       averageRating: 4.5,
       numReviews: 50,
-      image: 'https://example.com/image1.jpg',
+      image: '/assets/eddi-aguirre-ZAVHbpOn4Jk-unsplash.jpg',
     },
     {
       hotelName: 'Coastal Hotel',
@@ -19,7 +19,7 @@ export const rooms = [
       amenities: 5,
       averageRating: 4.2,
       numReviews: 30,
-      image: 'https://example.com/image2.jpg',
+      image: '/assets/visualsofdana-T5pL6ciEn-I-unsplash.jpg',
     },
     {
       hotelName: 'Mountain Lodge',
@@ -30,7 +30,7 @@ export const rooms = [
       amenities: 3,
       averageRating: 3.8,
       numReviews: 20,
-      image: 'https://example.com/image3.jpg',
+      image: '/assets/edvin-johansson-rlwE8f8anOc-unsplash.jpg',
     },
     {
       hotelName: 'Urban Boutique',
@@ -41,7 +41,7 @@ export const rooms = [
       amenities: 10,
       averageRating: 4.9,
       numReviews: 100,
-      image: 'https://example.com/image4.jpg',
+      image: '/assets/fernando-alvarez-rodriguez-M7GddPqJowg-unsplash.jpg',
     },
     {
       hotelName: 'Riverside Resort',
@@ -52,7 +52,7 @@ export const rooms = [
       amenities: 7,
       averageRating: 4.7,
       numReviews: 80,
-      image: 'https://example.com/image5.jpg',
+      image: '/assets/eddi-aguirre-ZAVHbpOn4Jk-unsplash.jpg',
     },
     {
         hotelName: 'Seaside Resort',
@@ -63,7 +63,7 @@ export const rooms = [
         amenities: 6,
         averageRating: 4.3,
         numReviews: 45,
-        image: 'https://example.com/image6.jpg',
+        image: '/assets/visualsofdana-T5pL6ciEn-I-unsplash.jpg',
       },
       {
         hotelName: 'Historic Mansion',
@@ -74,7 +74,7 @@ export const rooms = [
         amenities: 9,
         averageRating: 4.8,
         numReviews: 95,
-        image: 'https://example.com/image7.jpg',
+        image: '/assets/edvin-johansson-rlwE8f8anOc-unsplash.jpg',
       },
       {
         hotelName: 'Ski Resort',
@@ -85,7 +85,7 @@ export const rooms = [
         amenities: 5,
         averageRating: 4.1,
         numReviews: 35,
-        image: 'https://example.com/image8.jpg',
+        image: '/assets/fernando-alvarez-rodriguez-M7GddPqJowg-unsplash.jpg',
       },
       {
         hotelName: 'City Center Hotel',
@@ -96,7 +96,7 @@ export const rooms = [
         amenities: 4,
         averageRating: 3.7,
         numReviews: 25,
-        image: 'https://example.com/image9.jpg',
+        image: '/assets/eddi-aguirre-ZAVHbpOn4Jk-unsplash.jpg',
       },
       {
         hotelName: 'Lakefront Lodge',
@@ -107,7 +107,7 @@ export const rooms = [
         amenities: 3,
         averageRating: 3.5,
         numReviews: 15,
-        image: 'https://example.com/image10.jpg',
+        image: '/assets/edvin-johansson-rlwE8f8anOc-unsplash.jpg',
       },
   ];
   

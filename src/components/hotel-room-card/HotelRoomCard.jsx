@@ -7,6 +7,7 @@ import {
 } from "@mui/icons-material";
 import { Container, Card, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const HotelRoomCard = ({ room }) => {
   const {
@@ -21,6 +22,7 @@ const HotelRoomCard = ({ room }) => {
   } = room;
 
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleViewPlace = () => {
     navigate("/room");
@@ -48,9 +50,9 @@ const HotelRoomCard = ({ room }) => {
   };
 
   return (
-    <Card className="my-4" style={{ borderRadius: "10px" }}>
+    <Card className="my-4" style={{ borderRadius: "10px", boxShadow: "0px 4px 5px 2px rgba(0, 0, 0, 0.2)" }}>
       <Row>
-        <Col md={5}>
+        <Col md={5} style={{height:"300px"}}>
           <Card.Img
             src={room.image}
             style={{ objectFit: "cover", height: "100%" }}
@@ -76,7 +78,7 @@ const HotelRoomCard = ({ room }) => {
                     >
                       ${price}
                     </span>
-                    /night
+                    /{t("hotelRoomCard.night")}
                   </Card.Text>
                 </Col>
               </Row>
@@ -85,15 +87,15 @@ const HotelRoomCard = ({ room }) => {
                 {address}
               </Card.Text>
               <Row className="mb-2">
-                <Col>
+                <Col md={7}>
                   <Card.Text style={{ fontSize: "14px" }}>
-                    {renderLuxuryRating()} {luxuryRating} Stars Hotel
+                    {renderLuxuryRating()} {luxuryRating} {t("hotelRoomCard.stars")} {t("hotelRoomCard.hotel")}
                   </Card.Text>
                 </Col>
-                <Col>
+                <Col md={5}>
                   <Card.Text style={{ fontSize: "14px" }}>
                     <FreeBreakfast style={{ fontSize: "18px" }} />
-                    <strong>{amenities}+ </strong> Amenities
+                    <strong>{amenities}+ </strong> {t("hotelRoomCard.amenities")}
                   </Card.Text>
                 </Col>
               </Row>
@@ -109,7 +111,7 @@ const HotelRoomCard = ({ room }) => {
                   {" "}
                   {averageRating}
                 </span>{" "}
-                {numReviews} Reviews
+                {numReviews} {t("hotelRoomCard.reviews")}
               </Card.Text>
               <hr />
               <div className="d-flex justify-content-between mb-2">
@@ -123,7 +125,7 @@ const HotelRoomCard = ({ room }) => {
                   className="btn btn-sm btn-primary py-2 flex-grow-1"
                   onClick={handleViewPlace}
                 >
-                  View Place
+                  {t("hotelRoomCard.viewPlace")}
                 </button>
               </div>
             </Container>

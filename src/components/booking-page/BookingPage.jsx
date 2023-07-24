@@ -1,5 +1,6 @@
 import { React, useEffect, useState, useRef } from "react";
 import Navbar from "../navbar/Navbar";
+import Footer from "../footer/Footer";
 import { InputAdornment, TextField } from "@mui/material";
 import { KingBed, CalendarMonth, Person, Search } from "@mui/icons-material";
 import { DateRange } from "react-date-range";
@@ -8,6 +9,7 @@ import FilterPanel from "../filter-panel/FilterPanel";
 import HotelRoomCard from "../hotel-room-card/HotelRoomCard";
 import "./BookingPage.css"; // Import the CSS file
 import { rooms } from "../../placeholderData.jsx";
+import { useTranslation } from "react-i18next";
 
 export const BookingPage = () => {
   const [showPicker, setShowPicker] = useState(false);
@@ -20,6 +22,8 @@ export const BookingPage = () => {
       key: "selection",
     },
   ]);
+
+  const { t } = useTranslation();
 
   const handleDateChange = (ranges) => {
     setDateRange([ranges.selection]);
@@ -83,7 +87,7 @@ export const BookingPage = () => {
                     <TextField
                       fullWidth
                       type="text"
-                      placeholder="Enter your destination"
+                      placeholder={t("searchBar.destinationPlaceholder")}
                       InputProps={{
                         startAdornment: (
                           <InputAdornment position="start">
@@ -97,7 +101,7 @@ export const BookingPage = () => {
                     <div className="date-range-wrapper" ref={inputRef}>
                       <TextField
                         fullWidth
-                        placeholder="Check-in and Check-out dates"
+                        placeholder={t("searchBar.datePlaceholder")}
                         value={`${formatDate(
                           dateRange[0].startDate
                         )} - ${formatDate(dateRange[0].endDate)}`}
@@ -111,23 +115,14 @@ export const BookingPage = () => {
                           ),
                         }}
                       />
-                      {showPicker && (
-                        <div className="date-range-picker" ref={pickerRef}>
-                          <DateRange
-                            editableDateInputs={false}
-                            onChange={handleDateChange}
-                            moveRangeOnFirstSelection={false}
-                            ranges={dateRange}
-                          />
-                        </div>
-                      )}
+                      {/* ... */}
                     </div>
                   </Col>
                   <Col md={3} className="mb-2">
                     <TextField
                       fullWidth
                       type="number"
-                      placeholder="Number of guests"
+                      placeholder={t("searchBar.guestsPlaceholder")}
                       InputProps={{
                         startAdornment: (
                           <InputAdornment position="start">
@@ -156,7 +151,7 @@ export const BookingPage = () => {
               <FilterPanel />
             </Col>
             <Col md={8}>
-              {displayedRooms.map((room, index) => (
+            {displayedRooms.map((room, index) => (
                 <HotelRoomCard key={index} room={room} />
               ))}
               <Pagination style={{ display: "flex", justifyContent: "center" }}>
@@ -174,7 +169,7 @@ export const BookingPage = () => {
           </Row>
         </Container>
       </body>
-      <img src={require("../../Hotel-Listing.png")} alt="b" width="1600px" />
+      <Footer/>
     </>
   );
 };
