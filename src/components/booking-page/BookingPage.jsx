@@ -3,7 +3,6 @@ import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import { InputAdornment, TextField } from "@mui/material";
 import { KingBed, CalendarMonth, Person, Search } from "@mui/icons-material";
-import { DateRange } from "react-date-range";
 import { Container, Row, Col, Form, Button, Pagination } from "react-bootstrap";
 import FilterPanel from "../filter-panel/FilterPanel";
 import HotelRoomCard from "../hotel-room-card/HotelRoomCard";

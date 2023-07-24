@@ -12,7 +12,7 @@ export const ContactPage = () => {
     <Container className='my-3'>
       <Row className='d-flex align-items-center'>
         <Col md={6} >
-          <img src='/assets/eddi-aguirre-ZAVHbpOn4Jk-unsplash.jpg' alt="Left Column Image" className='img-fluid' />
+          <img src='/assets/eddi-aguirre-ZAVHbpOn4Jk-unsplash.jpg' alt="Left Column" className='img-fluid' />
         </Col>
         <Col md={6}>
           <h2>Contact Us</h2>

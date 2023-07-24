@@ -7,11 +7,10 @@ import {
   Container,
   Row,
   Col,
-  Button,
   Image,
 } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { Divider, Box, Typography, List, ListItem } from "@mui/material";
+import { Divider, Box, Typography} from "@mui/material";
 import {
   Star,
   Favorite,
