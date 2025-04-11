@@ -9,17 +9,16 @@ import { CheckoutPage } from "../checkout-page/CheckoutPage.jsx";
 
 const RoutesComponent = () => {
   return (
-    <>
-      <Routes>
-        <Route exact path="/contact-us" element={<ContactPage />} />
-        <Route exact path="/bookings" element={<BookingPage />} />
-        <Route exact path="/" element={<HomePage />} />
-        <Route path="/auth" element={<AuthRoute />} />
-        <Route exact path="/checkout" element={<CheckoutPage />} />
-        <Route element={<h1>Page not found</h1>} />
-        <Route path="room" element={<RoomPage />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/contact-us" element={<ContactPage />} />
+      <Route path="/bookings" element={<BookingPage />} />
+      <Route path="/auth" element={<AuthRoute />} />
+      <Route path="/checkout" element={<CheckoutPage />} />
+      <Route path="/room" element={<RoomPage />} />
+      <Route path="*" element={<h1>Page not found</h1>} />
+    </Routes>
   );
 };
+
 export { RoutesComponent };

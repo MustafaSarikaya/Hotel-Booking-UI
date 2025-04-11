@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from "react-router-dom"
 import i18n from 'i18next';
@@ -14,13 +14,12 @@ i18n
     fallbackLng: 'en', // Fallback language if translation is missing
   });
 
-ReactDOM.render(
+const basename = import.meta.env.DEV ? '/' : import.meta.env.VITE_PUBLIC_URL;
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </React.StrictMode>
-  ,
-  document.getElementById('root')
 );
-
